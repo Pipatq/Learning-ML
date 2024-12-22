@@ -1,6 +1,6 @@
 # Learning-ML
 
-This project is designed for learning the basics of data visualization and linear regression using Python. The code helps you understand how to create scatterplots, draw regression lines, and analyze relationships between variables.
+This project is designed for learning the basics of data visualization and linear regression using Python. The code helps me understand how to create scatterplots, draw regression lines, and analyze relationships between variables.
 
 ---
 
