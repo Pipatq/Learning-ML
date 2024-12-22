@@ -1,43 +1,46 @@
 # Learning-ML
 
-A Node.js web application with Express and MySQL, featuring session handling, dynamic HTML rendering, and database integration.
+This project is designed for students learning the basics of data visualization and linear regression using Python. The code helps you understand how to create scatterplots, draw regression lines, and analyze relationships between variables.
 
 ---
 
 ## **Installation and Setup**
 
-### 1. Clone the Repository
-Clone the repository and navigate to the project directory.
+### 1. Lib
+Ensure you have the following libraries installed in your Python environment: pandas, matplotlib, statsmodels
 
-### 2. Install Package.json
-Install Package.json with using npm init -y or npm init.
+### 2. Install Package 
+You can install them using:
 ```plaintext
-npm init -y
+pip install pandas matplotlib statsmodels
 ```
 
+## **Code Overview**
 
-### 3. Install Dependencies
-Install all required Node.js dependencies using npm install bcrypt cors dotenv ejs express express-session fs multer mysql2 nodemon path.
+### 1. Scatterplot with Data Points
+Create a scatterplot to see how two variables (SAT and GPA) are related:
 ```plaintext
-npm install bcrypt cors dotenv ejs express express-session fs multer mysql2 nodemon path
+plt.scatter(x, y)
+plt.xlabel('SAT', fontsize=20)
+plt.ylabel('GPA', fontsize=20)
+plt.show()
 ```
 
-### 4. Configure Environment Variables
-Create a `.env` file with the following:
+### 2. Run a Simple Linear Regression
+Use statsmodels to calculate the regression equation and get a summary:
 ```plaintext
-PORT=8081
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=sec1_gr10_database
+x1 = sm.add_constant(x)
+results = sm.OLS(y, x1).fit()
+print(results.summary())
 ```
 
-### **5. Start the Application
-Start node with using node app.
-```plaintext
-node app
+### 3. Adding Regression Lines
+We’ll add different types of regression lines to understand their effects:
+```python
+plt.scatter(x, y)
+yhat = 0.0017 * x + 0.275  # Regression equation
+plt.plot(x, yhat, lw=4, c='orange', label='Regression Line')
+plt.xlabel('SAT', fontsize=20)
+plt.ylabel('GPA', fontsize=20)
+plt.show()
 ```
-
-
-### **Accessing the Application
-http://localhost:8081/
